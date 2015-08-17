@@ -1,30 +1,30 @@
-var mp3s = ['/sounds/one.mp3','/sounds/two.mp3', '/sounds/three.mp3', '/sounds/four.mp3', '/sounds/five.mp3', '/sounds/six.mp3', '/sounds/seven.mp3', '/sounds/eight.mp3'];
+console.log('howdy friend');
 
+window.onload = function (){
+  var clickPlay = document.getElementById('soundbox');
+  clickPlay.addEventListener('click', playSound);
 
-// myPlayer.getSound = function () {
-//   if(!this.currentSound) {
-//     this.currentSound = soundManager.createSound({
-//       // for(i = 0; i < Mp3s.length; i++) {
-//       //   Mp3s[Math.floor[Math.random()*Mp3s.length]];
-      
-//       id: 'one',
-//       url: '/sounds/one.mp3',
-//       autoplay: true
+}
 
-//     });
-//   }
-//   return this.currentSound;
-// }
+var mp3s = ['sounds/one.mp3','sounds/two.mp3', 'sounds/three.mp3', 'sounds/four.mp3', 'sounds/five.mp3', 'sounds/six.mp3', 'sounds/seven.mp3', 'sounds/eight.mp3'];
 
-// myPlayer.currentSound = null;
-   
+var randMp3 = mp3s[Math.floor(Math.random()*mp3s.length)];
+// randmp3 = a song
 
 soundManager.setup({
-  url: '/path/to/swf-files/',
-  flashVersion: 9, // optional: shiny features (default = 8)
-  // optional: ignore Flash where possible, use 100% HTML5 mode
-  // preferFlash: false,
+
+  url: '/swf/',
+
+  // good to go: the onready() callback
+
   onready: function() {
-    // Ready to use; soundManager.createSound() etc. can now be called.
   }
 });
+
+function playSound(){
+  var randMp3 = mp3s[Math.floor(Math.random() * mp3s.length)];  
+  var mySound = soundManager.createSound({
+  url: randMp3
+  });
+  mySound.play(); 
+}

@@ -13,3 +13,11 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+
+.gray {
+  display: block;
+  color: #DDDDDD;
+  width: 100%;
+  height: 20%;
+
+}
