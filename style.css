@@ -1,0 +1,17 @@
+html {
+  background: url(images/JulesHead.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.box {
+  border-width: 5px;
+  border-color: solid red;
+  display: block;
+  width:  800px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
