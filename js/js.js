@@ -7,9 +7,6 @@ window.onload = function (){
 //array of mp3s
 var mp3s = ['sounds/one.mp3','sounds/two.mp3', 'sounds/three.mp3', 'sounds/four.mp3', 'sounds/five.mp3', 'sounds/six.mp3', 'sounds/seven.mp3', 'sounds/eight.mp3'];
 
-// //random generation of 
-// var randMp3 = mp3s[Math.floor(Math.random()*mp3s.length)];
-
 soundManager.setup({
   url: '/swf/',
   onready: function() {
